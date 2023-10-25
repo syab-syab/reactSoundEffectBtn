@@ -1,38 +1,116 @@
-.App {
+/* .App {
+  text-align: center;
+} */
+
+/* 基幹 */
+
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: url(../public/img/background.jpg);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* header */
+
+.header {
+  /* background: rgb(255, 234, 131); */
+  background-color: rgb(251 255 158);
+  padding: 3rem;
+  font-size: 2rem;
+}
+
+/* header end */
+
+/* container */
+
+.container {
+  padding: 1rem;
+}
+
+.sound-select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: auto;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: white;
+  font-size: 2.5rem;
+
+}
+
+.sound-effect-button-space {
+  font-size: 3rem;
+  padding: 2rem;
+  /* 要素を左寄せにするが文字まで左に寄る */
+  text-align: left;
+}
+
+.sound-effect-button {
+  display: inline-block;
+  background-color: rgb(251 255 158);
+  width: 30%;
+  padding: 3rem 0;
+  margin: 0 2rem 1.5rem;
+  margin: 0 2rem 6rem;
+  box-shadow: 0px 0px 22px -5px #919191;
+  /* 左に寄った文字のみを中央に戻す */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sound-effect-button:hover {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.active {
+  box-shadow: inset 0px 0px 12px 4px #C4C4C4;
+}
+
+/* container end */
+
+/* footer */
+
+.footer {
+  /* 後で変更 */
+  font-size: 3rem;
+}
+
+.twitter-share-btn {
+ margin-bottom: 1rem; 
+}
+
+.twitter-share-btn > a {
+  box-shadow: 0px 0px 22px -5px #919191;
+  font-size: 3rem;
+  padding: 0 0.5rem;
+  border-radius: 3%;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  background-color: rgb(251 255 158);
+}
+
+/* footer end */
+
+/* レスポンシブ */
+
+@media (max-width: 1465px) {
+  .sound-effect-button-space {
+    text-align: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .sound-effect-button {
+    display: block;
+    /* width: 100%; */
+    width: auto;
   }
 }
