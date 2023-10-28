@@ -9,23 +9,18 @@ function App() {
   }
 
   // 各フォルダの音声ファイル名
-  // const voice1: Array<string> = ["笑い声", "応！", "ドンドンパフパフ", "歓声", 
-  //                               "歓声(失敗時)", "おばけ", "悲鳴", "歓声と拍手", "黄色い悲鳴"];
   const voice1: Array<Sound> =
   [
     {id: 1, content:  "笑い声"},
     {id: 2, content: "応！"},
     {id: 3, content: "ドンドンパフパフ"},
     {id: 4, content: "歓声"},
-    {id: 5, content: "歓声(失敗時)"},
+    {id: 5, content: "落胆"},
     {id: 6, content: "おばけ"},
     {id: 7, content: "悲鳴"},
     {id: 8, content: "歓声と拍手"},
     {id: 9, content: "黄色い悲鳴"}
   ]
-
-  // const voice2: Array<string>  = ["犬", "牛", "ウグイス", "オオカミ", "ゾウ", "ニワトリ",
-  //                                 "ブタ", "ライオン", "猫",  "馬"];
 
   const voice2: Array<Sound> =
   [
@@ -40,9 +35,6 @@ function App() {
     {id: 9, content: "猫"},
     {id: 10, content: "馬"}
   ]
-
-  // const se1: Array<string>  = ["カーッ", "ジャジャーン", "ビシッ(高)", "ピンポン1", "ピンポン2", "ピンポン3", "不正解", "突撃ラッパ", 
-  //                             "ゴング(開始)", "ゴング(終了)", "整い(サウナ)", "ニュータイプ", "ビシッ",  "ピー音", "問題です"];
 
   const se1: Array<Sound> = 
   [
@@ -62,9 +54,6 @@ function App() {
     {id: 14, content: "ピー音"},
     {id: 15, content: "問題です"}
   ];
-
-  // const se2: Array<string>  = ["エアーホーン", "カキーン", "チリン", "デン！", "ドラ", "ドーン", "拍手", "爆発1", "爆発2", "鳩時計",
-  //                             "カウントダウン", "シャキーン", "テロン♪", "ドキドキ", "ドラムロール", "バーン", "ファンファーレ",  "衝撃",  "パフ",];
 
   const se2: Array<Sound> =
   [
@@ -89,8 +78,6 @@ function App() {
     {id: 19, content: "パフ"},
   ];
 
-  // const se3: Array<string>  = ["ガブッ", "ボヨン", "ポカン", "縮む", "伸びる", "切り替え",];
-
   const se3: Array<Sound> =
   [
     {id: 1, content: "ガブッ"},
@@ -100,8 +87,6 @@ function App() {
     {id: 5, content: "伸びる"},
     {id: 6, content: "切り替え"},
   ];
-
-  // const danger: Array<string>  = ["おなら1", "おなら2", "脱糞1", "脱糞2"];
 
   const danger: Array<Sound>  =
   [
@@ -176,7 +161,8 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <h1 className="title">効果音ボタン</h1>
+        <h1 className="title">オノまとめ</h1>
+        <p className='sub-title'>効果音ボタン集</p>
       </header>
 
       <main className="container">
@@ -202,9 +188,6 @@ function App() {
       </main>
 
       <footer className="footer">
-        {/* <div className="twitter-share-btn">
-          <a href="http://twitter.com/share?url=https://syab-syab.github.io/soundEffectBtn/&text=効果音ボタン" target="_blank"><i className="fa-brands fa-twitter"></i><span>Twitter</span></a>
-        </div> */}
         <span className="copy">
           © 効果音ボタン
         </span>

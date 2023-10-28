@@ -4,6 +4,8 @@
 
 /* 基幹 */
 
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Noto+Serif+JP:wght@200&display=swap');
+
 html {
   font-size: 62.5%;
 }
@@ -23,8 +25,16 @@ body {
 .header {
   /* background: rgb(255, 234, 131); */
   background-color: rgb(251 255 158);
-  padding: 3rem;
+  padding: 2rem;
   font-size: 2rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+
 }
 
 /* header end */
@@ -43,7 +53,6 @@ body {
   margin: 2rem auto;
   background-color: white;
   font-size: 2.5rem;
-
 }
 
 .sound-effect-button-space {
@@ -69,10 +78,6 @@ body {
   cursor: pointer;
 }
 
-.active {
-  box-shadow: inset 0px 0px 12px 4px #C4C4C4;
-}
-
 /* container end */
 
 /* footer */
@@ -80,21 +85,6 @@ body {
 .footer {
   /* 後で変更 */
   font-size: 3rem;
-}
-
-.twitter-share-btn {
- margin-bottom: 1rem; 
-}
-
-.twitter-share-btn > a {
-  box-shadow: 0px 0px 22px -5px #919191;
-  font-size: 3rem;
-  padding: 0 0.5rem;
-  border-radius: 3%;
-  color: black;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  background-color: rgb(251 255 158);
 }
 
 /* footer end */
