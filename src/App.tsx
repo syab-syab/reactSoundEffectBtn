@@ -157,17 +157,17 @@ function App() {
   const sounds: Array<any> = selectedSounds(genre)
 
   // 音声ファイルのフォルダ
-  const soundDir: string = `../public/sound/${sounds[0]}`
+  const soundDir = (val: string): string =>  `../public/sound/${sounds[0]}/${val}.mp3`
 
   // 表示するボタンの配列
   const buttons: Array<Sound> = sounds[1]
 
 
   // クリックしたら音を再生+activeクラスを付与
-  const handleClick = (): void => {
+  const handleClick = (e: Sound): void => {
     // クリックしたボタンのidかcontentが欲しい
-    // console.log(e)
-    console.log(soundDir)
+    console.log(e.content)
+    console.log(soundDir(e.content))
   }
 
 
@@ -190,7 +190,7 @@ function App() {
           {
             buttons.map(s => {
               return (
-                <div key={s.id} className="sound-effect-button" onClick={handleClick}>
+                <div key={s.id} className="sound-effect-button" onClick={() => handleClick(s)}>
                   {s.content}
                 </div>
               )
