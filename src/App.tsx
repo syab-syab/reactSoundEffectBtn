@@ -114,8 +114,10 @@ function App() {
   const localGenre = (): string => {
     const tmp = localStorage.getItem("local-selected-genre")
     if (!tmp) {
+      console.log(tmp)
       return "0"
     } else {
+      console.log(tmp)
       return tmp
     }
   }
@@ -127,35 +129,45 @@ function App() {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     localStorage.setItem("local-selected-genre", e.target.value)
     setGenre(e.target.value)
+    
   }
 
   // 選ばれたジャンルによって表示するボタンを変更する
-  const selectedSounds = (val: string): Array<Sound> => {
+  const selectedSounds = (val: string): Array<any> => {
+    // 配列を返す[フォルダ名, 再生ファイル名の配列
     switch (val) {
       case "0":
-        return voice1
+        return ["voice1", voice1]
       case "1":
-        return voice2
+        return ["voice2", voice2]
       case "2":
-        return se1
+        return ["se1", se1]
       case "3":
-        return se2
+        return ["se2", se2]
       case "4":
-        return se3
+        return ["se3", se3]
       case "5":
-        return danger
+        return ["danger", danger]
       default:
-        return voice1
+        return ["voice1", voice1]
     }
   }
 
+  // フォルダとボタンの配列
+  const sounds: Array<any> = selectedSounds(genre)
+
+  // 音声ファイルのフォルダ
+  const soundDir: string = `../public/sound/${sounds[0]}`
+
   // 表示するボタンの配列
-  const sounds = selectedSounds(genre)
+  const buttons: Array<Sound> = sounds[1]
 
 
   // クリックしたら音を再生+activeクラスを付与
   const handleClick = (): void => {
-    console.log("test")
+    // クリックしたボタンのidかcontentが欲しい
+    // console.log(e)
+    console.log(soundDir)
   }
 
 
@@ -166,7 +178,7 @@ function App() {
       </header>
 
       <main className="container">
-        <select name="" id="sound-select" className="sound-select" onChange={handleChange}>
+        <select value={genre} id="sound-select" className="sound-select" onChange={handleChange}>
           <option value="0">声系1</option>
           <option value="1">声系2</option>
           <option value="2">SE1</option>
@@ -176,7 +188,7 @@ function App() {
         </select>
         <div className="sound-effect-button-space" id="sound-effect-button-space">
           {
-            sounds.map(s => {
+            buttons.map(s => {
               return (
                 <div key={s.id} className="sound-effect-button" onClick={handleClick}>
                   {s.content}
