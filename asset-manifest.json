@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/reactSoundEffectBtn/static/css/main.c39695d7.css",
+    "main.js": "/reactSoundEffectBtn/static/js/main.7a0931ba.js",
+    "static/js/787.2734b206.chunk.js": "/reactSoundEffectBtn/static/js/787.2734b206.chunk.js",
+    "service-worker.js": "/reactSoundEffectBtn/service-worker.js",
+    "static/media/background.jpg": "/reactSoundEffectBtn/static/media/background.6ec7583483174fc79d87.jpg",
+    "index.html": "/reactSoundEffectBtn/index.html",
+    "main.c39695d7.css.map": "/reactSoundEffectBtn/static/css/main.c39695d7.css.map",
+    "main.7a0931ba.js.map": "/reactSoundEffectBtn/static/js/main.7a0931ba.js.map",
+    "787.2734b206.chunk.js.map": "/reactSoundEffectBtn/static/js/787.2734b206.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c39695d7.css",
+    "static/js/main.7a0931ba.js"
+  ]
+}
