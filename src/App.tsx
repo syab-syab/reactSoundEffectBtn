@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+
 function App() {
   type Sound = {
     id: number
@@ -157,17 +158,18 @@ function App() {
   const sounds: Array<any> = selectedSounds(genre)
 
   // 音声ファイルのフォルダ
-  const soundDir = (val: string): string =>  `../public/sound/${sounds[0]}/${val}.mp3`
+  const soundDir = (val: string): string =>  `./sound/${sounds[0]}/${val}.mp3`
 
   // 表示するボタンの配列
   const buttons: Array<Sound> = sounds[1]
-
 
   // クリックしたら音を再生+activeクラスを付与
   const handleClick = (e: Sound): void => {
     // クリックしたボタンのidかcontentが欲しい
     console.log(e.content)
     console.log(soundDir(e.content))
+    const sound = new Audio(soundDir(e.content));
+    sound.play()
   }
 
 
@@ -196,9 +198,6 @@ function App() {
               )
             })
           }
-        </div>
-        <div className="sound-effect-button">
-          test
         </div>
       </main>
 
